@@ -8,7 +8,7 @@ exports.resourceValidation = Joi.object({
 exports.getResourceByIdValidator = Joi.object({
   id: Joi.string().hex().length(24).required().messages({
     'string.length': 'Invalid ID format',
-    'any.required': 'User ID is required',
+    'any.required': 'resource ID is required',
   }),
 })
 

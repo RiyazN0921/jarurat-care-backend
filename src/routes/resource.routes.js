@@ -35,7 +35,7 @@ resourceRouter.get(
   '/:id',
   authMiddleware,
   roleMiddleware(['Admin', 'User']),
-  validate(getResourceByIdValidator),
+  validate(getResourceByIdValidator, 'params'),
   resourceController.getResourceById,
 )
 
